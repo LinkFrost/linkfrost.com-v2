@@ -1,0 +1,22 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+	<body>
+		<Header title={SITE_TITLE} />
+		<main>
+			<h1>Ashir Imran</h1>
+			<h2>aka LinkFrost</h2>
+			<p>Hello there! My name's Ashir, I'm a CS alumni from UMass Amherst, and I'm currently a Software Engineer at <span class="text-green-400 font-semibold">Citizens Bank</span>. I also dabble in some other hobbies, such as music, movies, and video games, which you can read about in the blog section.</p>
+		</main>
+		<Footer />
+	</body>
+</html>

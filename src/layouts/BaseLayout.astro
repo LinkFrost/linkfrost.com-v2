@@ -1,0 +1,20 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import '../styles/global.css';
+
+const { title, description, image = '/favicon.ico' } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en" style={{ colorScheme: "dark" }} class="bg-slate-900 flex justify-center items-center px-8 py-8 sm:px-12 sm:max-w-[900px] mx-auto"
+	<head>
+		<BaseHead title={title} description={description} />
+	</head>
+  <Header></Header>
+  <body>
+    <slot/>
+  </body>
+  <Footer></Footer>
+</html>

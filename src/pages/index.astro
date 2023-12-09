@@ -1,22 +1,15 @@
 ---
-import BaseHead from '../components/BaseHead.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import BaseLayout from '../layouts/BaseLayout.astro';
+
 ---
 
-<!doctype html>
-<html lang="en">
-	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-	</head>
-	<body>
-		<Header title={SITE_TITLE} />
-		<main>
-			<h1>Ashir Imran</h1>
-			<h2>aka LinkFrost</h2>
-			<p>Hello there! My name's Ashir, I'm a CS alumni from UMass Amherst, and I'm currently a Software Engineer at <span class="text-green-400 font-semibold">Citizens Bank</span>. I also dabble in some other hobbies, such as music, movies, and video games, which you can read about in the blog section.</p>
-		</main>
-		<Footer />
-	</body>
-</html>
+<BaseLayout title={SITE_TITLE} description={SITE_DESCRIPTION}>
+	<main>
+		<div class="pb-4">
+			<p class="text-xl transition-opacity ease-in-out animate-fade-in-second"><span class="text-purple-200 font-semibold">Hello there</span>, my name is</p>
+			<h1 class="text-purple-400 font-bold text-6xl transition-opacity ease-in-out animate-fade-in-first">Ashir</h1>
+		</div>
+		<p class="transition-opacity ease-in-out animate-fade-in-second">I'm a CS alumni from UMass Amherst, and I'm currently working as a Software Engineer at <span class="text-green-400 font-semibold">Citizens Bank</span>. This is my place to braindump my thoughts on various media I'm interested in, showcase my various projects, and all sorts of other stuff.</p>
+	</main>
+</BaseLayout>

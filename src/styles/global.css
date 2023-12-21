@@ -4,10 +4,6 @@
   License MIT: https://github.com/HermanMartinus/bearblog/blob/master/LICENSE.md
  */
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 @keyframes fade-in-first {
   from {
     opacity: 0;

@@ -8,13 +8,15 @@ const { title, description, image = '/favicon.ico' } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en" style={{ colorScheme: "dark" }} class="bg-slate-900 flex justify-center items-center px-8 py-8 sm:px-12 sm:max-w-[900px] mx-auto"
+<html lang="en" style={{ colorScheme: "dark" }} class="bg-slate-900"
 	<head>
 		<BaseHead title={title} description={description} />
 	</head>
-  <Header></Header>
-  <body>
-    <slot/>
+  <body class="flex flex-col px-8 py-8 sm:px-12 sm:max-w-[900px] mx-auto min-h-screen">
+    <div class="w-full">
+      <Header></Header>
+      <slot/>
+    </div>
+    <Footer></Footer>
   </body>
-  <Footer></Footer>
 </html>

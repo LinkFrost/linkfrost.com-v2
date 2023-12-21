@@ -1,7 +1,7 @@
 ---
 title: "Introducing: letsthink"
 pubDate: "July 17 2023"
-category: "cs"
+tags: "cs"
 description: "New project! This was a big one, created using microservice architecture."
 heroImage: "/img/letsthinkLogo.png"
 ---

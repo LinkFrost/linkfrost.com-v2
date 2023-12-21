@@ -1,0 +1,16 @@
+---
+import FormattedDate from "./FormattedDate.astro";
+
+const {slug, title, pubDate, description, heroImage} = Astro.props
+---
+
+<div class="flex sm:flex-row flex-col-reverse gap-2 sm:gap-8 pb-4 pt-4 border-b-2 border-slate-700 justify-between">
+  <div>
+    <h3 class="text-xl font-semibold">{title}</h3>
+    <p>{description}</p>
+  </div>
+
+  <div class="text-sm whitespace-nowrap">
+    <FormattedDate date={pubDate}></FormattedDate>
+  </div>
+</div>

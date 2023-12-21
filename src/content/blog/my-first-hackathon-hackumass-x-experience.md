@@ -1,7 +1,7 @@
 ---
 title: "My First Hackathon - HackUMass X Experience"
 pubDate: "November 26 2022"
-category: "cs"
+tags: "cs"
 description: "Last weekend, I participated in my first hackathon through HackUMass X, and I thought I'd write about my experience."
 heroImage: "https://dashboard.hackumass.com/assets/navlogo-bc47731249562952636adde8c1731c19b85a4e3b3a11f515727676d2cc585779.png"
 ---

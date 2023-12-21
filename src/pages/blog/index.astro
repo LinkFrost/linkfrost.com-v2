@@ -1,35 +1,24 @@
 ---
-import BaseHead from '../../components/BaseHead.astro';
-import Header from '../../components/Header.astro';
-import Footer from '../../components/Footer.astro';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts';
 import { getCollection } from 'astro:content';
-import FormattedDate from '../../components/FormattedDate.astro';
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import BlogPostCard from '../../components/BlogPostCard.astro';
 
 const posts = (await getCollection('blog')).sort(
 	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
 );
 ---
 
-
-		
-<BaseLayout><main>
-	<section>
-		<ul>
+<BaseLayout>
+	<main>
+		<div class="pb-6 transition-opacity ease-in-out animate-fade-in-first">
+			The blog where I ramble about whatever I'm into at the moment (mainly music, movies, and games). Maybe something education every once in a while. sdsdsdsdsdsdsdsasdsadsaskjbdskjfbdaskjfbkasdbf
+		</div>
+		<div class="transition-opacity ease-in-out animate-fade-in-second">
 			{
 				posts.map((post) => (
-					<li>
-						<a href={`/blog/${post.slug}/`}>
-							<img width={720} height={360} src={post.data.heroImage} alt="" />
-							<h4 class="title">{post.data.title}</h4>
-							<p class="date">
-								<FormattedDate date={post.data.pubDate} />
-							</p>
-						</a>
-					</li>
+					<BlogPostCard slug={post.slug} title={post.data.title} pubDate={post.data.pubDate} description={post.data.description} heroImage={post.data.heroImage}></BlogPostCard>
 				))
 			}
-		</ul>
-	</section>
-</main></BaseLayout>
+		</div>
+	</main>
+</BaseLayout>

@@ -55,7 +55,7 @@
 }
 
 .blog-post a {
-  @apply text-red-400 hover:text-red-600;
+  @apply text-lfred-500 hover:text-lfred-400;
 }
 
 .blog-post ol,

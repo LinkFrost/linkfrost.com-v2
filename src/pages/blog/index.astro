@@ -11,7 +11,7 @@ const posts = (await getCollection('blog')).sort(
 <BaseLayout title="Blog - LinkFrost">
 	<main>
 		<div class="transition-opacity ease-in-out animate-fade-in-first">
-			<h1 class="font-bold text-red-400 text-6xl pb-8">Blog</h1>
+			<h1 class="font-bold text-lfred-500 text-6xl pb-8">Blog</h1>
 			<p class="pb-4">The blog where I ramble about whatever I'm into at the moment (mainly music, movies, and games). Maybe something education every once in a while.</p>
 
 			<!-- <div class="flex gap-4">
@@ -24,10 +24,10 @@ const posts = (await getCollection('blog')).sort(
 				</select>
 			</div> -->
 		</div>
-		<div class="transition-opacity ease-in-out animate-fade-in-second">
+		<div class="transition-opacity ease-in-out animate-fade-in-second blogPosts">
 			{
-				posts.map((post) => (
-					<BlogPostCard slug={post.slug} title={post.data.title} pubDate={post.data.pubDate} description={post.data.description} heroImage={post.data.heroImage} tag={post.data.tag}></BlogPostCard>
+				posts.map((post, index) => (
+					<BlogPostCard slug={post.slug} title={post.data.title} pubDate={post.data.pubDate} description={post.data.description} heroImage={post.data.heroImage} tag={post.data.tag} isLast={index === posts.length - 1}></BlogPostCard>
 				))
 			}
 		</div>

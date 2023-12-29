@@ -1,0 +1,25 @@
+---
+const {name, logo, description, liveLink, repoLink, stack} = Astro.props
+---
+
+<div class="max-w-full flex flex-col border-black shadow-md shadow-black p-4">
+  <div class="flex flex-col sm:flex-row justify-between">
+    <h2 class="text-3xl font-semibold text-white -mt-2 mb-2">{name}</h2>
+    <div class="flex space-x-4 mb-2">
+      {liveLink && (
+        <a class="text-lfred-400 hover:text-lfred-600" href={liveLink} target="_blank" rel="noreferrer">
+          Visit
+          </a>
+          )}
+      {repoLink && (
+        <a class="text-zinc-300 hover:text-lfred-600" href={repoLink} target="_blank" rel="noreferrer">
+          Repository
+          </a>
+          )}
+    </div>
+  </div>
+  <div class="flex">
+    <img class="mb-2" style={{ height: "60px", width: "auto" }} src={logo} alt={`${name} logo`}></img>
+  </div>
+  <p class="">{description}</p>
+</div>

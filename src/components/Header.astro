@@ -4,14 +4,13 @@ import { SITE_TITLE } from '../consts';
 ---
 
 <header class="pb-8">
-	<nav class="flex justify-between items-center border-b-2 border-zinc-400 pb-8">
-		<h2 class="font-bold text-red-600 text-4xl"><a href="/">{SITE_TITLE}</a></h2>
-		<div class="flex justify-between gap-4 sm:gap-12">
+	<nav class="flex justify-between items-center border-b-2 border-darkblue-400 pb-8">
+		<h2 class="hidden xs:block font-bold text-lfred-500 text-4xl"><a href="/">{SITE_TITLE}</a></h2>
+		<div class="flex justify-between w-full xs:w-auto gap-4 sm:gap-12">
 			<HeaderLink href="/">Home</HeaderLink>
 			<HeaderLink href="/blog">Blog</HeaderLink>
 			<HeaderLink href="/projects">Projects</HeaderLink>
 			<HeaderLink href="/about">About</HeaderLink>
-			<HeaderLink href="/about">Contact</HeaderLink>
 		</div>
 	</nav>
 </header>

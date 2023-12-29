@@ -1,4 +1,17 @@
 ---
-import Layout from '../layouts/BlogPost.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
+<BaseLayout title="About - LinkFrost" description={SITE_DESCRIPTION}>
+	<main>
+		<div class="transition-opacity ease-in-out animate-fade-in-first">
+			<h1 class="font-bold text-lfred-500 text-6xl pb-8">About</h1>
+			<div class="transition-opacity ease-in-out animate-fade-in-second">
+        <p class="pb-4">I'm Ashir Imran. Like the front page mentions, I'm a CS alumni from UMass Amherst, and I'm currently working as a Software Engineer at Citizens Bank. I started off making my personal site as 1) a way to practice using frontend frameworks, and 2) create a portfolio that employers can look at to see my frontend skills and my projects. </p>
+        <p class="pb-4">As time has gone on, I've remade and refactored the site to be more focused on the things I enjoy. This still includes my various software projects, since I'm always interested in learning various tech stacks, frameworks, and creating cool things for other people to use. I enjoy a lot of music, movies, and video games, and I also enjoy talking about those things at length. I figure that this site can be a good place for me to write about the things I love, so that's the secondary purpose now. That's why this version of the site is built using simple HTML and Tailwind CSS using Astro instead of fancy Next.JS or React stuff, since I want something light and functional that I can keep on writing for.</p>
+        <p>I hope whoever's browsing ends up finding something interesting to look through, whether it's about Computer Science or whatever album I'm listening to at the moment!</p>
+      </div>
+		</div>
+	</main>
+</BaseLayout>

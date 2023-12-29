@@ -1,20 +1,45 @@
 ---
+import { getCollection } from 'astro:content';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 import BaseLayout from '../layouts/BaseLayout.astro';
+import BlogPostCard from '../components/BlogPostCard.astro';
+import FeaturedProject from '../components/FeaturedProject.astro';
+
+const posts = (await getCollection('blog')).sort(
+	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+).slice(0, 3);
 ---
 
 <BaseLayout title={SITE_TITLE} description={SITE_DESCRIPTION}>
 	<main>
-		<div class="flex flex-row items-center pb-4 gap-8">
+		<div class="flex flex-col xs:flex-row items-center pb-8 gap-8">
 			<img class="rounded-full border-white border-2 transition-opacity ease-in-out animate-fade-in-first" width="100px" src="img/ImranAshir.jpg" alt="Ashir Imran"></img>
 			<div class="flex flex-col">
-				<p class="text-xl transition-opacity ease-in-out animate-fade-in-second"><span class="text-red-400 font-semibold">Hello there</span>, my name is <span class="font-semibold">Ashir.</p>
+				<p class="text-xl transition-opacity ease-in-out animate-fade-in-first"><span class="text-lfred-500 font-semibold">Hello there</span>, my name is <span class="font-semibold">Ashir.</p>
 				<div class="flex flex-row items-end gap-2">
 					<!-- <h2 class="font-semibold text-lg">aka</h2> -->
 					<!-- <h1 class="font-bold text-red-400 text-6xl">LinkFrost</h1> -->
-				<p class="transition-opacity ease-in-out animate-fade-in-second">I'm a CS alumni from UMass Amherst, and I'm currently working as a Software Engineer at <span class="text-green-400 font-semibold">Citizens Bank</span>. This is my place to braindump my thoughts on various media I'm interested in, showcase my various projects, and all sorts of other stuff.</p>
+				<p class="transition-opacity ease-in-out animate-fade-in-first">I'm a CS alumni from UMass Amherst, and I'm currently working as a Software Engineer at <span class="text-green-400 font-semibold">Citizens Bank</span>. This is my place to braindump my thoughts on various media I'm interested in, showcase my various projects, and all sorts of other stuff.</p>
 				</div>
 			</div>
+		</div>
+
+		<hr class="border-darkblue-700 pb-4">
+
+		<div class="pb-4 transition-opacity ease-in-out animate-fade-in-second">
+			<h2 class="font-semibold text-lfred-500 text-4xl">Latest Posts ✍🏼</h2>
+			{
+				posts.map((post, index) => (
+					<BlogPostCard slug={post.slug} title={post.data.title} pubDate={post.data.pubDate} description={post.data.description} heroImage={post.data.heroImage} tag={post.data.tag} isLast={index === posts.length - 1}></BlogPostCard>
+				))
+			}
+		</div>
+
+		<hr class="border-darkblue-700 pb-4">
+		
+		<div class="transition-opacity ease-in-out animate-fade-in-second">
+			<h2 class="font-semibold text-lfred-500 text-4xl pb-4">Featured Project 🧑🏽‍💻</h2>
+			<FeaturedProject></FeaturedProject>
 		</div>
 	</main>
 </BaseLayout>

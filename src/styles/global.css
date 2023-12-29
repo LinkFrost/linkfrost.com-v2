@@ -29,3 +29,50 @@
 .animate-fade-in-second {
   animation: fade-in-second 1.5s ease-in-out forwards;
 }
+
+.blog-post h1 {
+  @apply text-4xl font-bold pb-4;
+}
+
+.blog-post h2 {
+  @apply text-2xl font-semibold pb-2;
+}
+
+.blog-post h3 {
+  @apply text-xl pb-2;
+}
+
+.blog-post h4 {
+  @apply text-4xl pb-2 font-semibold;
+}
+
+.blog-post hr {
+  @apply pb-4 border-zinc-400;
+}
+
+.blog-post p {
+  @apply pb-4;
+}
+
+.blog-post a {
+  @apply text-red-400 hover:text-red-600;
+}
+
+.blog-post ol,
+.blog-post ul {
+  @apply pl-8;
+  list-style: revert;
+}
+
+.blog-post li {
+  @apply pb-2;
+}
+
+.blog-post code {
+  @apply bg-slate-800 p-2 w-full mb-2;
+}
+
+.blog-post code,
+pre {
+  @apply mb-5;
+}

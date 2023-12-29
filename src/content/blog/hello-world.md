@@ -1,7 +1,7 @@
 ---
 title: "Hello World!"
 pubDate: "July 14 2022"
-tags: "misc"
+tag: "misc"
 description: "Hey! Welcome to the first of my blog posts. After tinkering with styles and a format for a long time, I think I've finally gotten my blog system in order."
 heroImage: "/img/testImage.jpg"
 ---

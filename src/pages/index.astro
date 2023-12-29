@@ -5,13 +5,16 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
 <BaseLayout title={SITE_TITLE} description={SITE_DESCRIPTION}>
 	<main>
-		<div class="flex flex-row pb-4 gap-8">
+		<div class="flex flex-row items-center pb-4 gap-8">
 			<img class="rounded-full border-white border-2 transition-opacity ease-in-out animate-fade-in-first" width="100px" src="img/ImranAshir.jpg" alt="Ashir Imran"></img>
 			<div class="flex flex-col">
-				<p class="text-xl transition-opacity ease-in-out animate-fade-in-second"><span class="text-purple-200 font-semibold">Hello there</span>, my name is</p>
-				<h1 class="text-purple-400 font-bold text-6xl transition-opacity ease-in-out animate-fade-in-first">Ashir</h1>
+				<p class="text-xl transition-opacity ease-in-out animate-fade-in-second"><span class="text-red-400 font-semibold">Hello there</span>, my name is <span class="font-semibold">Ashir.</p>
+				<div class="flex flex-row items-end gap-2">
+					<!-- <h2 class="font-semibold text-lg">aka</h2> -->
+					<!-- <h1 class="font-bold text-red-400 text-6xl">LinkFrost</h1> -->
+				<p class="transition-opacity ease-in-out animate-fade-in-second">I'm a CS alumni from UMass Amherst, and I'm currently working as a Software Engineer at <span class="text-green-400 font-semibold">Citizens Bank</span>. This is my place to braindump my thoughts on various media I'm interested in, showcase my various projects, and all sorts of other stuff.</p>
+				</div>
 			</div>
 		</div>
-		<p class="transition-opacity ease-in-out animate-fade-in-second">I'm a CS alumni from UMass Amherst, and I'm currently working as a Software Engineer at <span class="text-green-400 font-semibold">Citizens Bank</span>. This is my place to braindump my thoughts on various media I'm interested in, showcase my various projects, and all sorts of other stuff.</p>
 	</main>
 </BaseLayout>

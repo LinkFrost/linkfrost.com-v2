@@ -8,15 +8,26 @@ const posts = (await getCollection('blog')).sort(
 );
 ---
 
-<BaseLayout>
+<BaseLayout title="Blog - LinkFrost">
 	<main>
-		<div class="pb-6 transition-opacity ease-in-out animate-fade-in-first">
-			The blog where I ramble about whatever I'm into at the moment (mainly music, movies, and games). Maybe something education every once in a while. sdsdsdsdsdsdsdsasdsadsaskjbdskjfbdaskjfbkasdbf
+		<div class="transition-opacity ease-in-out animate-fade-in-first">
+			<h1 class="font-bold text-red-400 text-6xl pb-8">Blog</h1>
+			<p class="pb-4">The blog where I ramble about whatever I'm into at the moment (mainly music, movies, and games). Maybe something education every once in a while.</p>
+
+			<!-- <div class="flex gap-4">
+				<p class="font-semibold text-2xl items-center">Filter:</p>
+				<select class="p-2 bg-zinc-800" id="tag-filter">
+					<option value="All" selected="">All</option>
+					<option value="CS">CS</option>
+					<option value="Music">Music</option>
+					<option value="Misc">Misc</option>
+				</select>
+			</div> -->
 		</div>
 		<div class="transition-opacity ease-in-out animate-fade-in-second">
 			{
 				posts.map((post) => (
-					<BlogPostCard slug={post.slug} title={post.data.title} pubDate={post.data.pubDate} description={post.data.description} heroImage={post.data.heroImage}></BlogPostCard>
+					<BlogPostCard slug={post.slug} title={post.data.title} pubDate={post.data.pubDate} description={post.data.description} heroImage={post.data.heroImage} tag={post.data.tag}></BlogPostCard>
 				))
 			}
 		</div>

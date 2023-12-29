@@ -1,16 +1,19 @@
 ---
 import FormattedDate from "./FormattedDate.astro";
 
-const {slug, title, pubDate, description, heroImage} = Astro.props
+const {slug, title, pubDate, description, heroImage, tag} = Astro.props
 ---
 
-<div class="flex sm:flex-row flex-col-reverse gap-2 sm:gap-8 pb-4 pt-4 border-b-2 border-slate-700 justify-between">
+<div class="flex sm:flex-row flex-col-reverse gap-2 sm:gap-8 pb-4 pt-4 border-b-2 border-zinc-700 justify-between">
   <div>
-    <h3 class="text-xl font-semibold">{title}</h3>
-    <p>{description}</p>
+    <a class="w-min" href=`/blog/${tag}/${slug}`>
+      <h3 class="text-xl font-semibold pb-1">{title}</h3>
+    </a>
+    <p class="w-full">{description}</p>
   </div>
-
-  <div class="text-sm whitespace-nowrap">
+  
+  <div class="flex sm:flex-col flex-row sm:gap-1 gap-2 text-sm whitespace-nowrap sm:items-end">
     <FormattedDate date={pubDate}></FormattedDate>
+    <p class="w-min text-zinc-400">{tag}</p>
   </div>
 </div>

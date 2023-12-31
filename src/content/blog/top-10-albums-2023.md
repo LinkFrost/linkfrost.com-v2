@@ -1,6 +1,6 @@
 ---
 title: "Top 10 Albums - 2023"
-pubDate: "December 29 2023"
+pubDate: "December 31 2023"
 tag: "music"
 description: "This year has been... interesting. My main genre is usually Hip Hop, and there's a common sentiment about how it's been such a bad year for it, but that's not really the case in my opinion."
 heroImage: ""

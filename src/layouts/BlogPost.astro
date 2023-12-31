@@ -19,6 +19,6 @@ const { title, description, pubDate, updatedDate, heroImage, tag } = Astro.props
 <div class="flex pb-8">
 	<img width="300" height="auto" src={heroImage}></img>
 </div>
-<div class="blog-post">
+<div class=`blog-post ${tag === "music" ? 'music-post' : ''}`>
 	<slot></slot>
 </div>

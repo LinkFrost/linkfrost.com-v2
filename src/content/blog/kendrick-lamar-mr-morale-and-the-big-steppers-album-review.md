@@ -1,5 +1,5 @@
 ---
-title: "Kendrick Lamar - Mr. Morale & The Big Steppers Review"
+title: "Kendrick Lamar - Mr. Morale & The Big Steppers | Album Review"
 pubDate: "July 23 2022"
 tag: "music"
 description: "It's been a little over two months since Kendrick dropped his long-awaited fifth studio album, Mr. Morale & The Big Steppers, so I thought I'd give a deep dive into this album, and why I find it to be an incredible, beautiful piece of work."

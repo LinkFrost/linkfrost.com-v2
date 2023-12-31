@@ -199,9 +199,9 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
-"kendrick-lamar-mr-morale-and-the-big-steppers-review.md": {
-	id: "kendrick-lamar-mr-morale-and-the-big-steppers-review.md";
-  slug: "kendrick-lamar-mr-morale-and-the-big-steppers-review";
+"kendrick-lamar-mr-morale-and-the-big-steppers-album-review.md": {
+	id: "kendrick-lamar-mr-morale-and-the-big-steppers-album-review.md";
+  slug: "kendrick-lamar-mr-morale-and-the-big-steppers-album-review";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">
@@ -209,6 +209,13 @@ declare module 'astro:content' {
 "my-first-hackathon-hackumass-x-experience.md": {
 	id: "my-first-hackathon-hackumass-x-experience.md";
   slug: "my-first-hackathon-hackumass-x-experience";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"top-10-albums-2023.md": {
+	id: "top-10-albums-2023.md";
+  slug: "top-10-albums-2023";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">
